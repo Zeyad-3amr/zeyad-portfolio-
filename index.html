@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeyad Amr — Technical Product Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #141518;
+  --bg2:     #1c1e23;
+  --bg3:     #23262d;
+  --border:  rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --teal:    #2dd4bf;
+  --tdim:    rgba(45,212,191,0.11);
+  --white:   #f0f2f5;
+  --muted:   #8b909a;
+  --faint:   #4b5060;
+  --sh:      0 4px 24px rgba(0,0,0,0.38);
+  --shh:     0 8px 40px rgba(0,0,0,0.52);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(255,255,255,0.014) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.014) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.orb1{width:520px;height:520px;background:rgba(45,212,191,0.055);top:-120px;right:-80px}
+.orb2{width:380px;height:380px;background:rgba(139,92,246,0.045);bottom:160px;left:-80px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(20,21,24,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.logo{font-weight:700;font-size:.95rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:.55rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:blink 2.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+
+/* WRAPPER */
+.wrap{position:relative;z-index:1}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:7.5rem 2.5rem 5rem;max-width:1060px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:2.2rem;animation:rise .65s ease both}
+.eline{width:28px;height:1px;background:var(--teal)}
+.etxt{font-size:.72rem;font-weight:600;color:var(--teal);letter-spacing:.12em;text-transform:uppercase}
+h1.headline{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:700;line-height:1.06;letter-spacing:-.025em;margin-bottom:1.6rem;animation:rise .65s .1s ease both}
+h1.headline em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--teal)}
+.hero-p{font-size:1rem;color:var(--muted);max-width:540px;line-height:1.8;font-weight:300;margin-bottom:2.8rem;animation:rise .65s .2s ease both}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:rise .65s .3s ease both}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.68rem 1.55rem;border-radius:100px;font-size:.86rem;font-weight:500;text-decoration:none;transition:all .2s}
+.btn.p{background:var(--teal);color:#0c1412}.btn.p:hover{background:#5eead4;transform:translateY(-1px)}
+.btn.g{border:1px solid var(--border2);color:var(--muted)}.btn.g:hover{border-color:var(--teal);color:var(--teal)}
+.chips{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:3.2rem;animation:rise .65s .4s ease both}
+.chip{background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.38rem .95rem;font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:.4rem}
+.cdot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+.sec{padding:5rem 2.5rem;max-width:1060px;margin:0 auto}
+.sec-hdr{margin-bottom:2.8rem}
+.lbl{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.55rem}
+.sh{font-size:clamp(1.55rem,3.3vw,2.3rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.sh em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+.st{color:var(--muted);font-size:.9rem;font-weight:300;margin-top:.5rem;max-width:460px}
+.divider{height:1px;background:var(--border);max-width:1060px;margin:0 auto}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start}
+.about-copy p{color:var(--muted);font-size:.92rem;line-height:1.82;font-weight:300;margin-bottom:.9rem}
+.about-copy p strong{color:var(--white);font-weight:500}
+.cards{display:flex;flex-direction:column;gap:.7rem}
+.vcard{background:var(--bg2);border:1px solid var(--border);border-radius:.85rem;padding:1.05rem 1.2rem;display:flex;gap:.85rem;align-items:center;box-shadow:var(--sh);transition:border-color .2s,box-shadow .2s}
+.vcard:hover{border-color:var(--border2);box-shadow:var(--shh)}
+.vico{width:34px;height:34px;border-radius:.45rem;background:var(--tdim);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.vcard h4{font-size:.82rem;font-weight:600;margin-bottom:.12rem}
+.vcard p{font-size:.75rem;color:var(--muted);line-height:1.4}
+
+/* FEATURED PROJECT */
+.fp{background:var(--bg2);border:1px solid var(--border);border-radius:1.2rem;overflow:hidden;box-shadow:var(--sh);margin-bottom:1.25rem;transition:border-color .2s}
+.fp:hover{border-color:var(--border2)}
+.fp-top{padding:2.2rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start}
+.fp-badge{display:inline-flex;align-items:center;gap:.35rem;background:var(--tdim);border:1px solid rgba(45,212,191,.22);color:var(--teal);padding:.26rem .7rem;border-radius:100px;font-size:.7rem;font-weight:600;margin-bottom:.9rem}
+.fp-title{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.45rem}
+.fp-desc{color:var(--muted);font-size:.875rem;font-weight:300;line-height:1.65}
+.fp-link{display:inline-flex;align-items:center;gap:.35rem;background:var(--bg3);border:1px solid var(--border);color:var(--teal);text-decoration:none;padding:.5rem .95rem;border-radius:.55rem;font-size:.78rem;font-weight:500;white-space:nowrap;transition:border-color .2s}
+.fp-link:hover{border-color:var(--teal)}
+.fp-body{padding:2.2rem}
+.fp-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem}
+.col-lbl{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.9rem}
+.fp-ul{list-style:none}
+.fp-ul li{display:flex;gap:.6rem;color:var(--muted);font-size:.845rem;font-weight:300;padding:.42rem 0;border-bottom:1px solid var(--border);line-height:1.5}
+.fp-ul li:last-child{border-bottom:none}
+.fp-ul li::before{content:'›';color:var(--teal);font-size:.95rem;flex-shrink:0;margin-top:-1px}
+.fp-tags{margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:.45rem}
+.ttag{background:var(--bg3);border:1px solid var(--border);color:var(--faint);padding:.22rem .62rem;border-radius:.3rem;font-size:.7rem;font-weight:500}
+
+/* PROJECT GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+.pcard{background:var(--bg2);border:1px solid var(--border);border-radius:.95rem;padding:1.5rem;box-shadow:var(--sh);transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:.85rem}
+.pcard:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:var(--shh)}
+.pcard-top{display:flex;justify-content:space-between;align-items:flex-start}
+.pico{width:40px;height:40px;border-radius:.55rem;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.pco{font-size:.68rem;color:var(--faint);background:var(--bg3);border:1px solid var(--border);padding:.18rem .52rem;border-radius:100px}
+.pcard h3{font-size:.9rem;font-weight:600}
+.pcard p{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.6;flex:1}
+.pmetric{font-size:.75rem;color:var(--teal);font-weight:500;padding:.42rem .7rem;background:var(--tdim);border-radius:.45rem}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column}
+.exp-row{display:grid;grid-template-columns:185px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border)}
+.exp-row:last-child{border-bottom:none}
+.exp-l .ep{font-size:.76rem;color:var(--faint);margin-bottom:.35rem}
+.exp-l .eco{font-size:.82rem;font-weight:600;color:var(--teal)}
+.exp-r h3{font-size:.98rem;font-weight:600;margin-bottom:.8rem}
+.exp-pts{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.exp-pts li{display:flex;gap:.65rem;font-size:.83rem;color:var(--muted);font-weight:300;line-height:1.55}
+.exp-pts li::before{content:'▸';color:var(--teal);flex-shrink:0;font-size:.72rem;margin-top:.24rem}
+.mbadge{display:inline-block;background:rgba(45,212,191,.1);color:var(--teal);font-size:.7rem;font-weight:600;padding:.07rem .38rem;border-radius:.22rem}
+
+/* TRAINING */
+.train-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.tcard{background:var(--bg2);border:1px solid var(--border);border-radius:.85rem;padding:1.1rem 1.25rem;box-shadow:var(--sh);transition:border-color .2s}
+.tcard:hover{border-color:var(--border2)}
+.tcard h4{font-size:.88rem;font-weight:600;margin-bottom:.28rem}
+.tcard p{font-size:.77rem;color:var(--muted);font-weight:300}
+
+/* SKILLS */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.9rem}
+.sblock{background:var(--bg2);border:1px solid var(--border);border-radius:.95rem;padding:1.3rem;box-shadow:var(--sh);transition:border-color .2s}
+.sblock:hover{border-color:var(--border2)}
+.slbl{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem}
+.spills{display:flex;flex-wrap:wrap;gap:.38rem}
+.spill{background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:.2rem .58rem;border-radius:100px;font-size:.7rem;font-weight:400}
+
+/* CONTACT */
+.ccard{background:var(--bg2);border:1px solid var(--border);border-radius:1.2rem;padding:3.2rem;text-align:center;max-width:540px;margin:0 auto;box-shadow:var(--sh)}
+.ccard h2{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.7rem}
+.ccard h2 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--teal)}
+.ccard p{color:var(--muted);font-size:.88rem;font-weight:300;margin-bottom:1.9rem;line-height:1.75}
+.cbtns{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.cbtn{display:flex;align-items:center;gap:.45rem;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:.58rem 1.15rem;border-radius:.55rem;text-decoration:none;font-size:.83rem;font-weight:400;transition:border-color .2s,color .2s}
+.cbtn:hover{border-color:var(--teal);color:var(--teal)}
+
+footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color:var(--faint);font-size:.75rem;position:relative;z-index:1}
+
+/* ANIMATIONS */
+.fi{opacity:0;transform:translateY(16px);transition:opacity .52s ease,transform .52s ease}
+.fi.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero{padding:6rem 1.5rem 3.5rem}
+  .about-grid,.fp-top,.fp-cols,.exp-row,.train-grid{grid-template-columns:1fr}
+  .fp-top,.fp-body{padding:1.5rem}
+  .sec{padding:3.5rem 1.5rem}
+  .ccard{padding:2rem 1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<nav>
+  <a href="#" class="logo"><div class="dot"></div>Zeyad Amr</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow"><div class="eline"></div><span class="etxt">Open to PM opportunities · Cairo, Egypt</span></div>
+  <h1 class="headline">
+    Engineer transitioning<br>
+    into <em>Technical</em><br>
+    <em>Product Management.</em>
+  </h1>
+  <p class="hero-p">2+ years building scalable backend systems. Now applying that technical depth to product — discovery, PRDs, architecture decisions, and shipping real products end-to-end.</p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn p">See my work →</a>
+    <a href="mailto:zeyad.3amr01@gmail.com" class="btn g">Get in touch</a>
+    <a href="https://rekurloyalty.vercel.app" target="_blank" class="btn g">↗ Live product</a>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="cdot"></span>Technical PM</div>
+    <div class="chip"><span class="cdot"></span>Associate PM</div>
+    <div class="chip"><span class="cdot"></span>Product Owner</div>
+    <div class="chip"><span class="cdot"></span>Egypt &amp; MENA</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="sec-hdr fi">
+    <div class="lbl">About</div>
+    <h2 class="sh">Why engineering → <em>product?</em></h2>
+    <p class="st">Not a career pivot. A natural progression.</p>
+  </div>
+  <div class="about-grid fi">
+    <div class="about-copy">
+      <p>I started as a backend engineer because I love building things. But I kept asking questions that weren't in my job description — <strong>why are we building this? Who actually needs it? What problem does it solve?</strong></p>
+      <p>That curiosity led me to study product management formally — PM courses from the University of Maryland, a Technical PM course on LinkedIn Learning, and an AI for PMs workshop with Dorra Mlouhi. More importantly, I stopped thinking about building products and <strong>actually built one.</strong></p>
+      <p>Rekur is a digital loyalty platform I took from a personal frustration — forgetting my stamp card at coffee shops — to a live deployed product currently in pilot discussions with a Cairo coffee shop. End-to-end: discovery, PRD, product decisions, deployment.</p>
+      <p>I'm looking for a role where <strong>engineering depth is a feature, not a footnote</strong> — where I can sit with engineers as a peer and translate constraints into product decisions that actually make sense.</p>
+    </div>
+    <div class="cards">
+      <div class="vcard"><div class="vico">⚙️</div><div><h4>Technical fluency</h4><p>APIs, distributed systems, AI/ML — I follow every trade-off in a sprint review.</p></div></div>
+      <div class="vcard"><div class="vico">📄</div><div><h4>PM fundamentals</h4><p>PRD writing, discovery, prioritization, user research — practiced, not theoretical.</p></div></div>
+      <div class="vcard"><div class="vico">🚀</div><div><h4>Ships end-to-end</h4><p>Not just docs. Built and deployed a live product with production-grade security.</p></div></div>
+      <div class="vcard"><div class="vico">🌍</div><div><h4>MENA market context</h4><p>Building for Egypt. Understanding local gaps and what doesn't exist yet.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="sec-hdr fi">
+    <div class="lbl">Product Work</div>
+    <h2 class="sh">Things I've <em>built.</em></h2>
+    <p class="st">From identifying a problem to shipping the solution.</p>
+  </div>
+
+  <!-- Rekur featured -->
+  <div class="fp fi">
+    <div class="fp-top">
+      <div>
+        <div class="fp-badge">⭐ Featured — Full PM cycle</div>
+        <h3 class="fp-title">Rekur — Digital Coffee Loyalty Platform</h3>
+        <p class="fp-desc">Identified a market gap in Egypt through personal experience and coffee shop owner conversations. Wrote a full PRD across 3 versioned iterations. Built and deployed the MVP. Currently in pilot discussions with a Cairo coffee shop.</p>
+      </div>
+      <a href="https://rekurloyalty.vercel.app" target="_blank" class="fp-link">↗ Live product</a>
+    </div>
+    <div class="fp-body">
+      <div class="fp-cols">
+        <div>
+          <div class="col-lbl">Product decisions made</div>
+          <ul class="fp-ul">
+            <li>Identified market gap — no digital loyalty solution existed in Egypt's coffee market</li>
+            <li>Wrote full PRD: user flows, security model, success metrics, 3 versioned iterations</li>
+            <li>Removed cashier from digital flow entirely — friction eliminated at point of purchase</li>
+            <li>Defined 7-minute cooldown window based on real coffee shop queue data research</li>
+            <li>Scoped MVP deliberately — cut OTP, native app, and white-label features for v1</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-lbl">Security architecture shipped</div>
+          <ul class="fp-ul">
+            <li>HMAC-SHA256 signed rotating QR codes refreshing every 20 seconds</li>
+            <li>120-second session expiry — saved links from home blocked automatically</li>
+            <li>7-minute server-side cooldown per phone number — two-layer enforcement</li>
+            <li>Animated reward screen — proves reward is live, not a screenshot</li>
+            <li>Admin dashboard: real-time data, manual stamp fallback, logo upload</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fp-tags">
+        <span class="ttag">Next.js 14</span><span class="ttag">Supabase</span><span class="ttag">Prisma</span><span class="ttag">TypeScript</span><span class="ttag">HMAC-SHA256</span><span class="ttag">Tailwind CSS</span><span class="ttag">Vercel</span><span class="ttag">PRD</span><span class="ttag">User Research</span><span class="ttag">Sole PM &amp; Developer</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other projects -->
+  <div class="pgrid fi">
+    <div class="pcard">
+      <div class="pcard-top"><div class="pico">🤖</div><span class="pco">Convocore.AI</span></div>
+      <h3>AI Agent Platform Features</h3>
+      <p>Defined and shipped features for an AI-first platform — agent creation, knowledge base management, and customizable UI. Diagnosed client integration issues weekly, translating them into actionable technical specs.</p>
+      <div class="pmetric">Bridge between customers and engineering — weekly cadence</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-top"><div class="pico">🔐</div><span class="pco">Dsquares</span></div>
+      <h3>OTP Authentication System</h3>
+      <p>Led end-to-end design and delivery — requirements, security trade-offs, Python + DynamoDB implementation. Also drove a caching strategy that measurably improved platform performance.</p>
+      <div class="pmetric">40% API response time reduction</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-top"><div class="pico">🌐</div><span class="pco">Side project</span></div>
+      <h3>GPTranslate</h3>
+      <p>Conceived and built a multilingual AI translation platform with text-to-speech for accessibility. Integrated OpenAI and ElevenLabs APIs. Designed user flows and shipped production-ready solo.</p>
+      <div class="pmetric">End-to-end ownership — solo</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-top"><div class="pico">💬</div><span class="pco">Side project</span></div>
+      <h3>Real-Time Chat Application</h3>
+      <p>Defined requirements and delivered a full-featured chat product with real-time messaging, authentication, and online presence via WebSocket. Complete ownership from spec to deployment.</p>
+      <div class="pmetric">100% uptime — full product ownership</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience">
+  <div class="sec-hdr fi">
+    <div class="lbl">Experience</div>
+    <h2 class="sh">Where I've <em>worked.</em></h2>
+  </div>
+  <div class="exp-list fi">
+    <div class="exp-row">
+      <div class="exp-l"><div class="ep">Sep 2024 – Present</div><div class="eco">Dsquares</div></div>
+      <div class="exp-r">
+        <h3>Backend Engineer → Technical PM Candidate</h3>
+        <ul class="exp-pts">
+          <li>Owned end-to-end delivery of backend services — scoped features with stakeholders, defined requirements, and shipped scalable solutions on schedule</li>
+          <li>Drove <span class="mbadge">40% reduction</span> in API response times by identifying performance bottlenecks and championing a caching strategy</li>
+          <li>Cut error resolution time by <span class="mbadge">35%</span> by designing and shipping a global exception-handling middleware system</li>
+          <li>Led design and delivery of a hotel search feature (Meilisearch, 1.3M records, 7-minute pipeline) — managed technical scope and delivery end-to-end</li>
+          <li>Designed and delivered an OTP authentication flow (Python + DynamoDB) — managed requirements, security trade-offs, and implementation from discovery to production</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-l"><div class="ep">Mar 2025 – Aug 2025</div><div class="eco">Convocore.AI</div></div>
+      <div class="exp-r">
+        <h3>Full Stack Developer (Product-Oriented)</h3>
+        <ul class="exp-pts">
+          <li>Collaborated cross-functionally to define and ship AI-powered features — agent creation tools, knowledge base management, and customizable UI components</li>
+          <li>Acted as bridge between customers and engineering — diagnosed client integration issues weekly and translated them into actionable technical specifications</li>
+          <li>Improved authentication UX by replacing magic links with a custom OTP-based password reset flow, balancing security requirements with user experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TRAINING -->
+<section class="sec" id="training">
+  <div class="sec-hdr fi">
+    <div class="lbl">PM Training</div>
+    <h2 class="sh">How I've been <em>learning.</em></h2>
+    <p class="st">Formal courses, workshops, and deliberate self-study.</p>
+  </div>
+  <div class="train-grid fi">
+    <div class="tcard">
+      <h4>Product Management Essentials</h4>
+      <p>University of Maryland / Coursera — Mike V. Green</p>
+    </div>
+    <div class="tcard">
+      <h4>Product Market Fit</h4>
+      <p>University of Maryland / Coursera — Mike V. Green</p>
+    </div>
+    <div class="tcard">
+      <h4>Become a Technical Product Manager</h4>
+      <p>LinkedIn Learning — Marilly Nika</p>
+    </div>
+    <div class="tcard">
+      <h4>AI for Product Managers: Prompt Engineering</h4>
+      <p>Online session — Dorra Mlouhi / rituals.pm</p>
+    </div>
+  </div>
+  <div style="margin-top:1.5rem" class="fi">
+    <div class="sec-hdr" style="margin-bottom:1.2rem">
+      <div class="lbl" style="margin-top:1rem">Technical Self-Study</div>
+    </div>
+    <div class="train-grid">
+      <div class="tcard"><h4>CMU 15-445 Database Systems</h4><p>Carnegie Mellon University — storage models, indexing, query optimization, concurrency</p></div>
+      <div class="tcard"><h4>T-SQL Fundamentals</h4><p>Book — Itzik Ben-Gan — deep SQL and relational database foundations</p></div>
+      <div class="tcard"><h4>Operating Systems: Three Easy Pieces</h4><p>Book — OSTEP — virtualization, concurrency, persistence</p></div>
+      <div class="tcard"><h4>Designing Data-Intensive Applications (Ch. 1–3)</h4><p>Book — Martin Kleppmann — distributed systems and data models</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section class="sec" id="skills">
+  <div class="sec-hdr fi">
+    <div class="lbl">Skills</div>
+    <h2 class="sh">What I <em>bring.</em></h2>
+  </div>
+  <div class="sgrid fi">
+    <div class="sblock"><div class="slbl">Product & Delivery</div><div class="spills"><span class="spill">PRD Writing</span><span class="spill">Jira</span><span class="spill">Notion</span><span class="spill">Agile/Scrum</span><span class="spill">User Research</span><span class="spill">Roadmapping</span><span class="spill">RICE</span><span class="spill">MoSCoW</span></div></div>
+    <div class="sblock"><div class="slbl">AI & Emerging Tech</div><div class="spills"><span class="spill">OpenAI</span><span class="spill">LangChain</span><span class="spill">Prompt Engineering</span><span class="spill">LLM Integration</span></div></div>
+    <div class="sblock"><div class="slbl">Systems & Architecture</div><div class="spills"><span class="spill">Distributed Systems</span><span class="spill">API Design</span><span class="spill">SQL / NoSQL</span><span class="spill">OS Fundamentals</span><span class="spill">HMAC / Cryptography</span></div></div>
+    <div class="sblock"><div class="slbl">Backend & Cloud</div><div class="spills"><span class="spill">Node.js</span><span class="spill">NestJS</span><span class="spill">.NET C#</span><span class="spill">Python</span><span class="spill">AWS Lambda</span><span class="spill">Docker</span></div></div>
+    <div class="sblock"><div class="slbl">Frontend Awareness</div><div class="spills"><span class="spill">React.js</span><span class="spill">Next.js</span><span class="spill">TypeScript</span><span class="spill">Tailwind CSS</span></div></div>
+    <div class="sblock"><div class="slbl">Databases</div><div class="spills"><span class="spill">PostgreSQL</span><span class="spill">MongoDB</span><span class="spill">Supabase</span><span class="spill">DynamoDB</span><span class="spill">Prisma ORM</span></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="ccard fi">
+    <h2>Let's <em>talk.</em></h2>
+    <p>Actively looking for Technical PM, Associate PM, and Product Owner roles. If you're building something in Egypt or MENA and need someone who can think in both product and engineering — I'd love to hear from you.</p>
+    <div class="cbtns">
+      <a href="mailto:zeyad.3amr01@gmail.com" class="cbtn">📧 Email me</a>
+      <a href="https://linkedin.com/in/zeyad-wahdan" target="_blank" class="cbtn">💼 LinkedIn</a>
+      <a href="https://rekurloyalty.vercel.app" target="_blank" class="cbtn">🚀 Rekur</a>
+      <a href="https://github.com/Zeyad-3amr" target="_blank" class="cbtn">⚡ GitHub</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><p>Zeyad Amr · Technical Product Manager · Cairo, Egypt · 2026</p></footer>
+
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.07});
+document.querySelectorAll('.fi').forEach(el=>o.observe(el));
+</script>
+</body>
+</html>
