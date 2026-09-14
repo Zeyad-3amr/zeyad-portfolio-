@@ -146,8 +146,9 @@ h1.headline em{font-family:'Playfair Display',serif;font-style:italic;font-weigh
 footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color:var(--faint);font-size:.75rem;position:relative;z-index:1}
 
 /* ANIMATIONS */
-.fi{opacity:0;transform:translateY(16px);transition:opacity .52s ease,transform .52s ease}
-.fi.in{opacity:1;transform:none}
+.fi{transition:opacity .52s ease,transform .52s ease}
+.js .fi{opacity:0;transform:translateY(16px)}
+.js .fi.in{opacity:1;transform:none}
 
 /* RESPONSIVE */
 @media(max-width:768px){
@@ -190,11 +191,11 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
   <div class="hero-btns">
     <a href="#projects" class="btn p">See my work →</a>
     <a href="mailto:zeyad.3amr01@gmail.com" class="btn g">Get in touch</a>
-    <a href="https://rekurloyalty.vercel.app" target="_blank" class="btn g">↗ Live product</a>
   </div>
   <div class="chips">
     <div class="chip"><span class="cdot"></span>Technical PM</div>
     <div class="chip"><span class="cdot"></span>Associate PM</div>
+    <div class="chip"><span class="cdot"></span>Product Analyst</div>
     <div class="chip"><span class="cdot"></span>Product Owner</div>
     <div class="chip"><span class="cdot"></span>Egypt &amp; MENA</div>
   </div>
@@ -211,7 +212,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     <div class="about-copy">
       <p>I started as a backend engineer because I love building things. But I kept asking questions that weren't in my job description — <strong>why are we building this? Who actually needs it? What problem does it solve?</strong></p>
       <p>That curiosity led me to study product management formally — PM courses from the University of Maryland, a Technical PM course on LinkedIn Learning, and an AI for PMs workshop with Dorra Mlouhi. More importantly, I stopped thinking about building products and <strong>actually built one.</strong></p>
-      <p>Rekur is a digital loyalty platform I took from a personal frustration — forgetting my stamp card at coffee shops — to a live deployed product currently in pilot discussions with a Cairo coffee shop. End-to-end: discovery, PRD, product decisions, deployment.</p>
+      <p>Rekur is a digital loyalty platform I took from a personal frustration — forgetting my stamp card at coffee shops — to a live, deployed product. End-to-end: discovery, PRD, product decisions, threat model, and deployment. Now pre-pilot — built and live, not yet launched with a shop.</p>
       <p>I'm looking for a role where <strong>engineering depth is a feature, not a footnote</strong> — where I can sit with engineers as a peer and translate constraints into product decisions that actually make sense.</p>
     </div>
     <div class="cards">
@@ -239,9 +240,8 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
       <div>
         <div class="fp-badge">⭐ Featured — Full PM cycle</div>
         <h3 class="fp-title">Rekur — Digital Coffee Loyalty Platform</h3>
-        <p class="fp-desc">Identified a market gap in Egypt through personal experience and coffee shop owner conversations. Wrote a full PRD across 3 versioned iterations. Built and deployed the MVP. Currently in pilot discussions with a Cairo coffee shop.</p>
+        <p class="fp-desc">Identified a market gap in Egypt through personal experience and field observation of how coffee shops run paper stamp cards. Wrote a full PRD across 5 versioned iterations. Built and deployed the MVP with production-grade security. Now pre-pilot — live, not yet launched with a shop.</p>
       </div>
-      <a href="https://rekurloyalty.vercel.app" target="_blank" class="fp-link">↗ Live product</a>
     </div>
     <div class="fp-body">
       <div class="fp-cols">
@@ -249,10 +249,11 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
           <div class="col-lbl">Product decisions made</div>
           <ul class="fp-ul">
             <li>Identified market gap — no digital loyalty solution existed in Egypt's coffee market</li>
-            <li>Wrote full PRD: user flows, security model, success metrics, 3 versioned iterations</li>
+            <li>Wrote full PRD: user flows, security model, success metrics, 5 versioned iterations</li>
             <li>Removed cashier from digital flow entirely — friction eliminated at point of purchase</li>
-            <li>Defined 7-minute cooldown window based on real coffee shop queue data research</li>
+            <li>Defined a 7-minute cooldown window sized to worst-case coffee-shop queue times</li>
             <li>Scoped MVP deliberately — cut OTP, native app, and white-label features for v1</li>
+            <li>Mapped the funnel to AARRR, made retention the north-star metric, and designed an SMS "almost there" reminder as a first A/B test</li>
           </ul>
         </div>
         <div>
@@ -262,12 +263,14 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
             <li>120-second session expiry — saved links from home blocked automatically</li>
             <li>7-minute server-side cooldown per phone number — two-layer enforcement</li>
             <li>Animated reward screen — proves reward is live, not a screenshot</li>
+            <li>Atomic DB transactions on every stamp — no double-count, no lost stamp</li>
+            <li>Apple Wallet passes with live APNs push updates as stamps are added</li>
             <li>Admin dashboard: real-time data, manual stamp fallback, logo upload</li>
           </ul>
         </div>
       </div>
       <div class="fp-tags">
-        <span class="ttag">Next.js 14</span><span class="ttag">Supabase</span><span class="ttag">Prisma</span><span class="ttag">TypeScript</span><span class="ttag">HMAC-SHA256</span><span class="ttag">Tailwind CSS</span><span class="ttag">Vercel</span><span class="ttag">PRD</span><span class="ttag">User Research</span><span class="ttag">Sole PM &amp; Developer</span>
+        <span class="ttag">Next.js 14</span><span class="ttag">Supabase</span><span class="ttag">PostgreSQL</span><span class="ttag">TypeScript</span><span class="ttag">HMAC-SHA256</span><span class="ttag">Apple Wallet</span><span class="ttag">APNs</span><span class="ttag">Tailwind CSS</span><span class="ttag">Vercel</span><span class="ttag">PRD</span><span class="ttag">AARRR</span><span class="ttag">Sole PM &amp; Developer</span>
       </div>
     </div>
   </div>
@@ -326,7 +329,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     <div class="exp-row">
       <div class="exp-l"><div class="ep">Mar 2025 – Aug 2025</div><div class="eco">Convocore.AI</div></div>
       <div class="exp-r">
-        <h3>Full Stack Developer (Product-Oriented)</h3>
+        <h3>Full Stack Developer <span class="mbadge">Part-time Contract</span> · Remote</h3>
         <ul class="exp-pts">
           <li>Collaborated cross-functionally to define and ship AI-powered features — agent creation tools, knowledge base management, and customizable UI components</li>
           <li>Acted as bridge between customers and engineering — diagnosed client integration issues weekly and translated them into actionable technical specifications</li>
@@ -357,7 +360,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     </div>
     <div class="tcard">
       <h4>Become a Technical Product Manager</h4>
-      <p>LinkedIn Learning — Marilly Nika</p>
+      <p>LinkedIn Learning — Marily Nika</p>
     </div>
     <div class="tcard">
       <h4>AI for Product Managers: Prompt Engineering</h4>
@@ -387,6 +390,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
   </div>
   <div class="sgrid fi">
     <div class="sblock"><div class="slbl">Product & Delivery</div><div class="spills"><span class="spill">PRD Writing</span><span class="spill">Jira</span><span class="spill">Notion</span><span class="spill">Agile/Scrum</span><span class="spill">User Research</span><span class="spill">Roadmapping</span><span class="spill">RICE</span><span class="spill">MoSCoW</span></div></div>
+    <div class="sblock"><div class="slbl">Data & Analytics</div><div class="spills"><span class="spill">SQL</span><span class="spill">Amplitude</span><span class="spill">Funnel Analysis</span><span class="spill">Cohort / Retention</span><span class="spill">AARRR Metrics</span><span class="spill">A/B Testing</span></div></div>
     <div class="sblock"><div class="slbl">AI & Emerging Tech</div><div class="spills"><span class="spill">OpenAI</span><span class="spill">LangChain</span><span class="spill">Prompt Engineering</span><span class="spill">LLM Integration</span></div></div>
     <div class="sblock"><div class="slbl">Systems & Architecture</div><div class="spills"><span class="spill">Distributed Systems</span><span class="spill">API Design</span><span class="spill">SQL / NoSQL</span><span class="spill">OS Fundamentals</span><span class="spill">HMAC / Cryptography</span></div></div>
     <div class="sblock"><div class="slbl">Backend & Cloud</div><div class="spills"><span class="spill">Node.js</span><span class="spill">NestJS</span><span class="spill">.NET C#</span><span class="spill">Python</span><span class="spill">AWS Lambda</span><span class="spill">Docker</span></div></div>
@@ -401,11 +405,10 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
 <section class="sec" id="contact">
   <div class="ccard fi">
     <h2>Let's <em>talk.</em></h2>
-    <p>Actively looking for Technical PM, Associate PM, and Product Owner roles. If you're building something in Egypt or MENA and need someone who can think in both product and engineering — I'd love to hear from you.</p>
+    <p>Actively looking for Technical PM, Associate PM, Product Analyst, and Product Owner roles. If you're building something in Egypt or MENA and need someone who can think in both product and engineering — I'd love to hear from you.</p>
     <div class="cbtns">
       <a href="mailto:zeyad.3amr01@gmail.com" class="cbtn">📧 Email me</a>
       <a href="https://linkedin.com/in/zeyad-wahdan" target="_blank" class="cbtn">💼 LinkedIn</a>
-      <a href="https://rekurloyalty.vercel.app" target="_blank" class="cbtn">🚀 Rekur</a>
       <a href="https://github.com/Zeyad-3amr" target="_blank" class="cbtn">⚡ GitHub</a>
     </div>
   </div>
@@ -416,6 +419,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
 <footer><p>Zeyad Amr · Technical Product Manager · Cairo, Egypt · 2026</p></footer>
 
 <script>
+document.documentElement.classList.add('js');
 const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.07});
 document.querySelectorAll('.fi').forEach(el=>o.observe(el));
 </script>
