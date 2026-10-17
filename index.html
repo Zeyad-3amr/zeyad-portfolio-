@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zeyad Amr — Technical Product Manager</title>
+<title>Zeyad Amr — Product Manager</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -117,6 +117,9 @@ h1.headline em{font-family:'Playfair Display',serif;font-style:italic;font-weigh
 .exp-pts{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .exp-pts li{display:flex;gap:.65rem;font-size:.83rem;color:var(--muted);font-weight:300;line-height:1.55}
 .exp-pts li::before{content:'▸';color:var(--teal);flex-shrink:0;font-size:.72rem;margin-top:.24rem}
+.exp-pts li>.t{flex:1;min-width:0}
+.exp-pts li strong{color:var(--white);font-weight:600}
+.fp-ul li>.t{flex:1;min-width:0}
 .mbadge{display:inline-block;background:rgba(45,212,191,.1);color:var(--teal);font-size:.7rem;font-weight:600;padding:.07rem .38rem;border-radius:.22rem}
 
 /* TRAINING */
@@ -168,12 +171,13 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
 <nav>
   <a href="#" class="logo"><div class="dot"></div>Zeyad Amr</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#training">Training</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><span class="t"><a href="#about">About</a></span></li>
+    <li><span class="t"><a href="#projects">Projects</a></span></li>
+    <li><span class="t"><a href="#experience">Experience</a></span></li>
+    <li><span class="t"><a href="#training">Training</a></span></li>
+    <li><span class="t"><a href="#skills">Skills</a></span></li>
+    <li><span class="t"><a href="#education">Education</a></span></li>
+    <li><span class="t"><a href="#contact">Contact</a></span></li>
   </ul>
 </nav>
 
@@ -184,8 +188,8 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
   <div class="eyebrow"><div class="eline"></div><span class="etxt">Open to PM opportunities · Cairo, Egypt</span></div>
   <h1 class="headline">
     Engineer transitioning<br>
-    into <em>Technical</em><br>
-    <em>Product Management.</em>
+    into <em>Product</em><br>
+    <em>Management.</em>
   </h1>
   <p class="hero-p">2+ years building scalable backend systems. Now applying that technical depth to product — discovery, PRDs, architecture decisions, and shipping real products end-to-end.</p>
   <div class="hero-btns">
@@ -193,7 +197,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     <a href="mailto:zeyad.3amr01@gmail.com" class="btn g">Get in touch</a>
   </div>
   <div class="chips">
-    <div class="chip"><span class="cdot"></span>Technical PM</div>
+    <div class="chip"><span class="cdot"></span>Product Manager</div>
     <div class="chip"><span class="cdot"></span>Associate PM</div>
     <div class="chip"><span class="cdot"></span>Product Analyst</div>
     <div class="chip"><span class="cdot"></span>Product Owner</div>
@@ -213,6 +217,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
       <p>I started as a backend engineer because I love building things. But I kept asking questions that weren't in my job description — <strong>why are we building this? Who actually needs it? What problem does it solve?</strong></p>
       <p>That curiosity led me to study product management formally — PM courses from the University of Maryland, a Technical PM course on LinkedIn Learning, and an AI for PMs workshop with Dorra Mlouhi. More importantly, I stopped thinking about building products and <strong>actually built one.</strong></p>
       <p>Rekur is a digital loyalty platform I took from a personal frustration — forgetting my stamp card at coffee shops — to a live, deployed product. End-to-end: discovery, PRD, product decisions, threat model, and deployment. Now pre-pilot — built and live, not yet launched with a shop.</p>
+      <p>I also run Agile in practice, not just in theory — I <strong>led daily standups</strong> for my squad before a dedicated Product Owner joined, and work through sprint planning, backlog refinement, and retrospectives.</p>
       <p>I'm looking for a role where <strong>engineering depth is a feature, not a footnote</strong> — where I can sit with engineers as a peer and translate constraints into product decisions that actually make sense.</p>
     </div>
     <div class="cards">
@@ -248,24 +253,24 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
         <div>
           <div class="col-lbl">Product decisions made</div>
           <ul class="fp-ul">
-            <li>Identified market gap — no digital loyalty solution existed in Egypt's coffee market</li>
-            <li>Wrote full PRD: user flows, security model, success metrics, 5 versioned iterations</li>
-            <li>Removed cashier from digital flow entirely — friction eliminated at point of purchase</li>
-            <li>Defined a 7-minute cooldown window sized to worst-case coffee-shop queue times</li>
-            <li>Scoped MVP deliberately — cut OTP, native app, and white-label features for v1</li>
-            <li>Mapped the funnel to AARRR, made retention the north-star metric, and designed an SMS "almost there" reminder as a first A/B test</li>
+            <li><span class="t">Identified market gap — no digital loyalty solution existed in Egypt's coffee market</span></li>
+            <li><span class="t">Wrote full PRD: user flows, security model, success metrics, 5 versioned iterations</span></li>
+            <li><span class="t">Removed cashier from digital flow entirely — friction eliminated at point of purchase</span></li>
+            <li><span class="t">Defined a 7-minute cooldown window sized to worst-case coffee-shop queue times</span></li>
+            <li><span class="t">Scoped MVP deliberately — cut OTP, native app, and white-label features for v1</span></li>
+            <li><span class="t">Mapped the funnel to AARRR, made retention the north-star metric, and designed an SMS "almost there" reminder as a first A/B test</span></li>
           </ul>
         </div>
         <div>
           <div class="col-lbl">Security architecture shipped</div>
           <ul class="fp-ul">
-            <li>HMAC-SHA256 signed rotating QR codes refreshing every 20 seconds</li>
-            <li>120-second session expiry — saved links from home blocked automatically</li>
-            <li>7-minute server-side cooldown per phone number — two-layer enforcement</li>
-            <li>Animated reward screen — proves reward is live, not a screenshot</li>
-            <li>Atomic DB transactions on every stamp — no double-count, no lost stamp</li>
-            <li>Apple Wallet passes with live APNs push updates as stamps are added</li>
-            <li>Admin dashboard: real-time data, manual stamp fallback, logo upload</li>
+            <li><span class="t">HMAC-SHA256 signed rotating QR codes refreshing every 20 seconds</span></li>
+            <li><span class="t">120-second session expiry — saved links from home blocked automatically</span></li>
+            <li><span class="t">7-minute server-side cooldown per phone number — two-layer enforcement</span></li>
+            <li><span class="t">Animated reward screen — proves reward is live, not a screenshot</span></li>
+            <li><span class="t">Atomic DB transactions on every stamp — no double-count, no lost stamp</span></li>
+            <li><span class="t">Apple Wallet passes with live APNs push updates as stamps are added</span></li>
+            <li><span class="t">Admin dashboard: real-time data, manual stamp fallback, logo upload</span></li>
           </ul>
         </div>
       </div>
@@ -316,13 +321,14 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     <div class="exp-row">
       <div class="exp-l"><div class="ep">Sep 2024 – Present</div><div class="eco">Dsquares</div></div>
       <div class="exp-r">
-        <h3>Backend Engineer → Technical PM Candidate</h3>
+        <h3>Backend Developer</h3>
         <ul class="exp-pts">
-          <li>Owned end-to-end delivery of backend services — scoped features with stakeholders, defined requirements, and shipped scalable solutions on schedule</li>
-          <li>Drove <span class="mbadge">40% reduction</span> in API response times by identifying performance bottlenecks and championing a caching strategy</li>
-          <li>Cut error resolution time by <span class="mbadge">35%</span> by designing and shipping a global exception-handling middleware system</li>
-          <li>Led design and delivery of a hotel search feature (Meilisearch, 1.3M records, 7-minute pipeline) — managed technical scope and delivery end-to-end</li>
-          <li>Designed and delivered an OTP authentication flow (Python + DynamoDB) — managed requirements, security trade-offs, and implementation from discovery to production</li>
+          <li><span class="t"><strong>Led daily standups</strong> for the squad before a dedicated Product Owner joined — and contribute through sprint planning, backlog refinement, and retrospectives alongside the PO</span></li>
+          <li><span class="t">Owned features end-to-end — gathered requirements with stakeholders, made scope and security trade-offs, and shipped to production: delivered an OTP authentication flow (Python + DynamoDB) from requirements through launch</span></li>
+          <li><span class="t">Built the hotel booking engine (pre-book, book, booking-detail APIs) integrated with the TBO supplier API, with background jobs that reconcile booking status and retry pending bookings</span></li>
+          <li><span class="t">Engineered hotel search with Meilisearch — 1.3M records indexed via scheduled jobs, full ingestion-to-index pipeline in under 7 minutes</span></li>
+          <li><span class="t">Delivered <strong>OpsCenter</strong>, internal operations tooling for hotel bookings — searchable list/detail, price-changed and email-sent filters — giving support visibility and control over live bookings</span></li>
+          <li><span class="t">Drove <span class="mbadge">40% reduction</span> in API response times via caching, and cut error-resolution time by <span class="mbadge">35%</span> with global exception-handling middleware</span></li>
         </ul>
       </div>
     </div>
@@ -331,9 +337,9 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
       <div class="exp-r">
         <h3>Full Stack Developer <span class="mbadge">Part-time Contract</span> · Remote</h3>
         <ul class="exp-pts">
-          <li>Collaborated cross-functionally to define and ship AI-powered features — agent creation tools, knowledge base management, and customizable UI components</li>
-          <li>Acted as bridge between customers and engineering — diagnosed client integration issues weekly and translated them into actionable technical specifications</li>
-          <li>Improved authentication UX by replacing magic links with a custom OTP-based password reset flow, balancing security requirements with user experience</li>
+          <li><span class="t">Collaborated cross-functionally to define and ship AI-powered features — agent creation tools, knowledge base management, and customizable UI components</span></li>
+          <li><span class="t">Acted as bridge between customers and engineering — diagnosed client integration issues weekly and translated them into actionable technical specifications</span></li>
+          <li><span class="t">Improved authentication UX by replacing magic links with a custom OTP-based password reset flow, balancing security requirements with user experience</span></li>
         </ul>
       </div>
     </div>
@@ -378,6 +384,41 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
       <div class="tcard"><h4>Designing Data-Intensive Applications (Ch. 1–3)</h4><p>Book — Martin Kleppmann — distributed systems and data models</p></div>
     </div>
   </div>
+  <div style="margin-top:1.5rem" class="fi">
+    <div class="sec-hdr" style="margin-bottom:1.2rem">
+      <div class="lbl" style="margin-top:1rem">Self-Directed Product Practice</div>
+    </div>
+    <div class="train-grid">
+      <div class="tcard"><h4>Versioned PRD with change logs</h4><p>Authored and maintained 5 versions, documenting scope decisions and trade-offs</p></div>
+      <div class="tcard"><h4>AARRR funnel map &amp; A/B-test plan</h4><p>Written growth case study — north-star metric and first experiment defined</p></div>
+      <div class="tcard"><h4>Success-metric definition</h4><p>Activation, 2-week retention, and full-loop completion defined as pilot metrics</p></div>
+      <div class="tcard"><h4>Competitor &amp; market research</h4><p>Egyptian loyalty market — validated no digital alternative served small shops</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section class="sec" id="education">
+  <div class="sec-hdr fi">
+    <div class="lbl">Education</div>
+    <h2 class="sh">Where I <em>studied.</em></h2>
+  </div>
+  <div class="exp-list fi">
+    <div class="exp-row">
+      <div class="exp-l"><div class="ep">2019 – 2023</div><div class="eco">Future University in Egypt</div></div>
+      <div class="exp-r"><h3>B.Sc. Computer Science — Grade: Very Good</h3>
+        <ul class="exp-pts"><li><span class="t">Cairo, Egypt</span></li></ul>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-l"><div class="ep">2023</div><div class="eco">University of Cincinnati</div></div>
+      <div class="exp-r"><h3>B.Sc. Computer Science — Joint Program</h3>
+        <ul class="exp-pts"><li><span class="t">Ohio, USA</span></li></ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"></div>
@@ -389,13 +430,15 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
     <h2 class="sh">What I <em>bring.</em></h2>
   </div>
   <div class="sgrid fi">
-    <div class="sblock"><div class="slbl">Product & Delivery</div><div class="spills"><span class="spill">PRD Writing</span><span class="spill">Jira</span><span class="spill">Notion</span><span class="spill">Agile/Scrum</span><span class="spill">User Research</span><span class="spill">Roadmapping</span><span class="spill">RICE</span><span class="spill">MoSCoW</span></div></div>
+    <div class="sblock"><div class="slbl">Product Strategy</div><div class="spills"><span class="spill">Problem Discovery</span><span class="spill">Market &amp; Competitor Research</span><span class="spill">Product-Market Fit</span><span class="spill">Opportunity Sizing</span><span class="spill">Scope &amp; Trade-offs</span><span class="spill">Roadmapping</span><span class="spill">Product Vision</span></div></div>
+    <div class="sblock"><div class="slbl">Delivery &amp; Agile</div><div class="spills"><span class="spill">PRD Writing</span><span class="spill">User Stories &amp; Acceptance Criteria</span><span class="spill">Backlog Refinement</span><span class="spill">Sprint Planning</span><span class="spill">Daily Standups</span><span class="spill">Retrospectives</span><span class="spill">RICE</span><span class="spill">MoSCoW</span><span class="spill">Agile/Scrum</span><span class="spill">Jira</span><span class="spill">Notion</span></div></div>
+    <div class="sblock"><div class="slbl">User &amp; Market</div><div class="spills"><span class="spill">User Research</span><span class="spill">Field Observation</span><span class="spill">User Flows</span><span class="spill">Journey Mapping</span><span class="spill">Abuse &amp; Edge-Case Modeling</span><span class="spill">MENA Market Context</span></div></div>
     <div class="sblock"><div class="slbl">Data & Analytics</div><div class="spills"><span class="spill">SQL</span><span class="spill">Amplitude</span><span class="spill">Funnel Analysis</span><span class="spill">Cohort / Retention</span><span class="spill">AARRR Metrics</span><span class="spill">A/B Testing</span></div></div>
     <div class="sblock"><div class="slbl">AI & Emerging Tech</div><div class="spills"><span class="spill">OpenAI</span><span class="spill">LangChain</span><span class="spill">Prompt Engineering</span><span class="spill">LLM Integration</span></div></div>
     <div class="sblock"><div class="slbl">Systems & Architecture</div><div class="spills"><span class="spill">Distributed Systems</span><span class="spill">API Design</span><span class="spill">SQL / NoSQL</span><span class="spill">OS Fundamentals</span><span class="spill">HMAC / Cryptography</span></div></div>
-    <div class="sblock"><div class="slbl">Backend & Cloud</div><div class="spills"><span class="spill">Node.js</span><span class="spill">NestJS</span><span class="spill">.NET C#</span><span class="spill">Python</span><span class="spill">AWS Lambda</span><span class="spill">Docker</span></div></div>
+    <div class="sblock"><div class="slbl">Backend & Cloud</div><div class="spills"><span class="spill">Node.js</span><span class="spill">NestJS</span><span class="spill">.NET C#</span><span class="spill">Python</span><span class="spill">AWS Lambda</span><span class="spill">Docker</span><span class="spill">Microservices</span><span class="spill">Postman</span><span class="spill">Swagger/OpenAPI</span></div></div>
     <div class="sblock"><div class="slbl">Frontend Awareness</div><div class="spills"><span class="spill">React.js</span><span class="spill">Next.js</span><span class="spill">TypeScript</span><span class="spill">Tailwind CSS</span></div></div>
-    <div class="sblock"><div class="slbl">Databases</div><div class="spills"><span class="spill">PostgreSQL</span><span class="spill">MongoDB</span><span class="spill">Supabase</span><span class="spill">DynamoDB</span><span class="spill">Prisma ORM</span></div></div>
+    <div class="sblock"><div class="slbl">Databases</div><div class="spills"><span class="spill">PostgreSQL</span><span class="spill">MongoDB</span><span class="spill">Supabase</span><span class="spill">DynamoDB</span><span class="spill">Prisma ORM</span><span class="spill">Meilisearch</span></div></div>
   </div>
 </section>
 
@@ -405,7 +448,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
 <section class="sec" id="contact">
   <div class="ccard fi">
     <h2>Let's <em>talk.</em></h2>
-    <p>Actively looking for Technical PM, Associate PM, Product Analyst, and Product Owner roles. If you're building something in Egypt or MENA and need someone who can think in both product and engineering — I'd love to hear from you.</p>
+    <p>Actively looking for Product Manager, Associate PM, Product Analyst, and Product Owner roles. If you're building something in Egypt or MENA and need someone who can think in both product and engineering — I'd love to hear from you.</p>
     <div class="cbtns">
       <a href="mailto:zeyad.3amr01@gmail.com" class="cbtn">📧 Email me</a>
       <a href="https://linkedin.com/in/zeyad-wahdan" target="_blank" class="cbtn">💼 LinkedIn</a>
@@ -416,7 +459,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;color
 
 </div>
 
-<footer><p>Zeyad Amr · Technical Product Manager · Cairo, Egypt · 2026</p></footer>
+<footer><p>Zeyad Amr · Product Manager · Cairo, Egypt · 2026</p></footer>
 
 <script>
 document.documentElement.classList.add('js');
